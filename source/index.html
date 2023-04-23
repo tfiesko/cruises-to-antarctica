@@ -14,17 +14,53 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="page-header">
+        <div class="container">
+          <div class="mobile-menu" data-mobile-menu>
+            <div class="page-header__wrapper mobile-menu__content">
+              <a class="logo" href="#">
+                <svg width="70px" height="38px">
+                  <use xlink:href="img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <button class="mobile-menu__toggle" type="button" aria-label="Показать/скрыть меню" data-mobile-menu-button></button>
+              <nav class="main-nav mobile-menu__list">
+                <ul class="main-nav__list">
+                  <li class="main-nav__list-item">
+                    <a class="main-nav__link"href="#">
+                      Преимущества
+                    </a>
+                  </li>
+                  <li class="main-nav__list-item">
+                    <a class="main-nav__link" href="#">
+                      Направления
+                    </a>
+                  </li>
+                  <li class="main-nav__list-item">
+                    <a class="main-nav__link" href="#">
+                      Ближайшие круизы
+                    </a>
+                  </li>
+                  <li class="main-nav__list-item">
+                    <a class="main-nav__link" href="#">
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
       </header>
       <main>
-        <section class="intro">
+        <section class="hero">
           <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+            <div class="hero__content">
+              <h1>Круизы в Антарктику</h1>
+              <p>
+                Волшебный мир айсбергов и пингвинов
+              </p>
+            </div>
           </div>
         </section>
       </main>
@@ -32,36 +68,6 @@
         <div class="container"></div>
       </footer>
     </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

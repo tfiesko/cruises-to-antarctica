@@ -1,0 +1,19 @@
+.hero {
+  background-color: $color-curious-blue;
+  background-image: url("../img/hero-background-desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  @include vp-767 {
+    box-shadow: none;
+  }
+}
+
+.hero__content {
+  min-height: 650px;
+  padding: 110px 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
