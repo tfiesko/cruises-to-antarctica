@@ -26,23 +26,23 @@
               <button class="mobile-menu__toggle" type="button" aria-label="Показать/скрыть меню" data-mobile-menu-button></button>
               <nav class="main-nav mobile-menu__list">
                 <ul class="main-nav__list">
-                  <li class="main-nav__list-item">
-                    <a class="main-nav__link"href="#">
+                  <li class="main-nav__list-item nav-item nav-item--header-menu">
+                    <a class="nav-item__link" href="#">
                       Преимущества
                     </a>
                   </li>
-                  <li class="main-nav__list-item">
-                    <a class="main-nav__link" href="#">
+                  <li class="main-nav__list-item nav-item nav-item--header-menu">
+                    <a class="nav-item__link" href="#">
                       Направления
                     </a>
                   </li>
-                  <li class="main-nav__list-item">
-                    <a class="main-nav__link" href="#">
+                  <li class="main-nav__list-item nav-item nav-item--header-menu">
+                    <a class="nav-item__link" href="#">
                       Ближайшие круизы
                     </a>
                   </li>
-                  <li class="main-nav__list-item">
-                    <a class="main-nav__link" href="#">
+                  <li class="main-nav__list-item nav-item nav-item--header-menu">
+                    <a class="nav-item__link" href="#">
                       Контакты
                     </a>
                   </li>
@@ -64,8 +64,63 @@
           </div>
         </section>
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="page-footer">
+        <div class="container">
+          <div class="page-footer__content">
+            <a class="logo logo--footer" href="#">
+              <svg width="70px" height="38px">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <nav class="page-footer__nav footer-nav">
+              <ul class="footer-nav__list">
+                <li class="footer-nav__item nav-item">
+                  <a class="footer-nav__link nav-item__link" href="#">
+                    Преимущества
+                  </a>
+                </li>
+                <li class="footer-nav__item nav-item">
+                  <a class="footer-nav__link nav-item__link" href="#">
+                    Направления
+                  </a>
+                </li>
+                <li class="footer-nav__item nav-item">
+                  <a class="footer-nav__link nav-item__link" href="#">
+                    Ближайшие круизы
+                  </a>
+                </li>
+                <li class="footer-nav__item nav-item">
+                  <a class="footer-nav__link nav-item__link" href="#">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="social">
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg width="12" height="20">
+                    <use xlink:href="img/sprite.svg#ok-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg width="20" height="20">
+                    <use xlink:href="img/sprite.svg#dzen-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg width="20" height="20">
+                    <use xlink:href="img/sprite.svg#reddit-icon"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </footer>
     </div>
     <script src="js/vendor.min.js"></script>

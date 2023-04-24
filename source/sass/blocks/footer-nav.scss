@@ -1,0 +1,34 @@
+.footer-nav__link {
+
+}
+
+.footer-nav {
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.footer-nav__list {
+  padding: 0;
+  margin: 0;
+  margin-right: 25px;
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
+
+  @include vp-767 {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.footer-nav__item {
+  margin-right: 33px;
+
+  @include vp-767 {
+    margin-right: 0;
+  }
+}

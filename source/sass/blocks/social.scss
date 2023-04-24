@@ -1,0 +1,47 @@
+.social {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 27px;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  @include vp-1023 {
+    column-gap: 20px;
+  }
+}
+
+.social__link {
+  display: flex;
+  width: 20px;
+  height: 20px;
+
+  @include vp-1023 {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.social__link svg {
+  fill: $color-alice-blue;
+
+  &:hover {
+    fill: darken($color-alice-blue, 30%);
+  }
+
+  &:active {
+    fill: darken($color-alice-blue, 60%);
+  }
+}
+
+.social__link * {
+  max-width: 20px;
+  max-height: 20px;
+  margin: auto;
+
+  @include vp-1023 {
+    max-width: 17px;
+    max-height: 17px;
+  }
+}
