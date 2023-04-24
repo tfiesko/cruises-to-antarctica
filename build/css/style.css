@@ -1199,6 +1199,7 @@ button,
 }
 @media (max-width: 767px) {
   .main-nav__list-item {
+    padding: 0;
     margin-left: 12px;
   }
 }
@@ -1220,9 +1221,13 @@ button,
 }
 @media (max-width: 767px) {
   .main-nav__link {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
     color: #011C40;
     font-size: 18px;
     line-height: 22px;
+    font-weight: 500;
   }
 }
 
@@ -1251,6 +1256,7 @@ button,
     display: grid;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    row-gap: 25px;
     -ms-grid-rows: 75px;
     grid-template-rows: 75px;
     padding: 20px 15px;

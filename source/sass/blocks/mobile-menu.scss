@@ -25,6 +25,7 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+    row-gap: 25px;
     grid-template-rows: 75px;
     padding: 20px 15px;
     width: calc(100% - 36px);
