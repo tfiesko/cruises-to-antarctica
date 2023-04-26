@@ -25,7 +25,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 25px;
-    grid-template-rows: 75px;
+    grid-template-rows: 25px;
     padding: 20px 15px;
     width: calc(100% - 36px);
     min-height: 100%;
@@ -74,6 +74,8 @@
 }
 
 .mobile-menu.is-open .mobile-menu__toggle {
+  align-self: start;
+
   &::before,
   &::after {
     position: absolute;

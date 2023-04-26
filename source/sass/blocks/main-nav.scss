@@ -19,6 +19,10 @@
 .main-nav__list-item {
   margin-left: 33px;
 
+  @include vp-1023 {
+    margin-left: 26px;
+  }
+
   @include vp-767 {
     margin-left: 12px;
   }

@@ -1,0 +1,58 @@
+.page-description {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 145px;
+
+  @include vp-1023 {
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 65px 0 85px;
+  }
+}
+
+.page-description__content {
+  display: flex;
+  align-items: flex-start;
+
+  @include vp-767 {
+    flex-wrap: wrap;
+  }
+}
+
+.page-description__text-content {
+  flex-basis: 324px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin-right: 88px;
+  align-self: center;
+
+  @include vp-1023 {
+    margin-right: 30px;
+  }
+
+  @include vp-767 {
+    flex-basis: 290px;
+  }
+}
+
+.page-description h2 {
+  font-size: 28px;
+  line-height: 42px;
+
+  @include vp-1023 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+.page-description img {
+
+}

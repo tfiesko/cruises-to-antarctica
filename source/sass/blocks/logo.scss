@@ -29,6 +29,10 @@
   height: auto;
 }
 
+[data-mobile-menu].is-open .logo {
+  align-self: start;
+}
+
 [data-mobile-menu].is-open .logo svg {
   fill: $color-tangaroa;
 }

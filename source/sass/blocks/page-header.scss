@@ -3,6 +3,12 @@
   width: 100%;
 
   min-height: 60px;
+
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include vp-1023 {
+    text-shadow: none;
+  }
 }
 
 .page-header__wrapper {
@@ -10,4 +16,12 @@
   min-height: 115px;
   justify-content: space-between;
   align-items: center;
+
+  @include vp-1023 {
+    min-height: 80px;
+  }
+
+  @include vp-767 {
+    min-height: 60px;
+  }
 }
