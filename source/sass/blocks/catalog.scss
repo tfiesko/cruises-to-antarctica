@@ -1,0 +1,140 @@
+.catalog {
+  min-height: 600px;
+
+  text-align: center;
+}
+
+.catalog__card-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  text-align: start;
+
+  @include vp-1023 {
+    max-width: 678px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include vp-767 {
+    max-width: 309px;
+  }
+}
+
+.catalog__card-item {
+  position: relative;
+
+  margin: 15px;
+  width: calc(25% - 30px);
+
+  color: $color-alice-blue;
+
+
+  &:hover,
+  &:focus-visible,
+  &:focus-within {
+    .catalog__card-content {
+      z-index: 1;
+    }
+  }
+
+  @include vp-1023 {
+    width: calc(50% - 30px);
+  }
+
+  @include vp-767 {
+    margin: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: calc(100% - 20px);
+  }
+}
+
+.catalog__card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  display: grid;
+  grid-template-columns: minmax(8px, 25px) minmax(159px, 1fr) minmax(8px, 25px);
+  grid-template-rows: 25px 1fr auto auto 25px;
+  width: 100%;
+  height: 100%;
+
+  background-color: $color-tangaroa;
+
+  @include vp-1023 {
+    grid-template-columns: minmax(8px, 35px) minmax(159px, 1fr) minmax(8px, 35px);
+  }
+
+  @include vp-767 {
+    grid-template-columns: 25px minmax(159px, 1fr) 25px;
+  }
+}
+
+.catalog__card-description {
+  grid-column: 2/-2;
+  grid-row: 3/-3;
+  margin-top: 14px;
+
+  overflow-y: auto;
+}
+
+.catalog__card-description p {
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.catalog__card-description h4 {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+}
+
+.catalog__card-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.catalog__card-item h3 {
+  grid-column: 2/-2;
+  grid-row: 2/3;
+  margin: 0;
+  margin-top: 5px;
+
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+}
+
+.catalog__card-button {
+  justify-content: center;
+  width: 100%;
+  grid-column: 2/-2;
+  grid-row: -2/-3;
+  padding: 9px 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+}
+
+.catalog__card-cover {
+  position: relative;
+}
+
+.catalog__card-cover h3 {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+}
