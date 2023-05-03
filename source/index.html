@@ -395,6 +395,41 @@
             </div>
           </div>
         </section>
+        <section class="booking">
+          <div class="container">
+            <div class="booking__wrapper" data-form-validate>
+              <div class="booking__description">
+                <h2>Ранее бронирование</h2>
+                <p>
+                  Забронируйте тур за&nbsp;3&#8209;6&nbsp;месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%
+                </p>
+              </div>
+              <form class="booking__form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+                <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
+                <div data-validate-type="text" data-limitation="name" data-required>
+                  <label class="visually-hidden" for="user-name">Имя</label>
+                  <input type="text" id="user-name" placeholder="Имя" required>
+                </div>
+                <div data-validate-type="phone" data-required>
+                  <label class="visually-hidden" for="user-tel">Телефон</label>
+                  <input type="tel" id="user-tel" name="user-tel" placeholder="Телефон" required>
+                </div>
+                <div data-validate-type="email" data-required>
+                  <label class="visually-hidden" for="user-email">Email</label>
+                  <input type="email" id="user-email" name="user-email" placeholder="Email" required>
+                </div>
+                <div class="booking__form-checkbox custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
+                  <label>
+                    <input type="checkbox" name="agreement" value="agreement" checked>
+                    <span class="custom-toggle__icon"></span>
+                    <span class="custom-toggle__label">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
+                  </label>
+                </div>
+                <button class="booking__form-button btn" type="submit">Оставить заявку</button>
+              </form>
+            </div>
+          </div>
+        </section>
       </main>
       <footer class="page-footer">
         <div class="container">

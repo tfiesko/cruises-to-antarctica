@@ -16,7 +16,7 @@
     background-image: url("../img/hero-background-tablet.jpg");
 
     @include retina {
-      background-image: url("../../img/hero-background-tablet@2x.jpg");
+      background-image: url("../img/hero-background-tablet@2x.jpg");
     }
   }
 

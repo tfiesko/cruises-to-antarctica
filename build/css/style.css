@@ -741,22 +741,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 500px;
-  padding: 14px 0 10px 36px;
-}
-@media screen and (max-width: 767px) {
-  .custom-toggle {
-    padding: 14px 0 10px 0;
-    width: 100%;
-  }
-}
-.custom-toggle:last-of-type {
-  padding: 14px 0 58px 36px;
-}
-@media screen and (max-width: 767px) {
-  .custom-toggle:last-of-type {
-    padding: 14px 0 58px 0;
-  }
+  min-height: 18px;
 }
 .custom-toggle input {
   position: absolute;
@@ -767,7 +752,14 @@ button,
 }
 .custom-toggle label {
   position: relative;
-  padding-left: 52px;
+  padding-left: 23px;
+  min-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
 }
 .custom-toggle label span {
@@ -778,27 +770,20 @@ button,
   position: absolute;
   top: 0;
   left: 0;
-  width: 28px;
-  height: 28px;
-  border: 1.5px solid #2c39f2;
-  -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
-  transition: border 0.3s ease;
+  width: 18px;
+  height: 18px;
+  background-color: #f9fbfd;
 }
 .custom-toggle--checkbox .custom-toggle__icon::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: rgba(44, 57, 242, 0);
+  width: 10px;
+  height: 7px;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
 }
 .custom-toggle--radio .custom-toggle__icon {
   position: absolute;
@@ -828,11 +813,11 @@ button,
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
-.custom-toggle input:checked + .custom-toggle__icon {
-  border: 1.5px solid #2c39f2;
-}
 .custom-toggle input:checked + .custom-toggle__icon::before {
-  background-color: #2c39f2;
+  background-image: url("../img/svg/checked.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .custom-toggle.is-invalid label span {
   color: #ff1553;
@@ -1358,7 +1343,7 @@ button,
 }
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .hero {
-    background-image: url("../../img/hero-background-tablet@2x.jpg");
+    background-image: url("../img/hero-background-tablet@2x.jpg");
   }
 }
 @media (max-width: 374px) {
@@ -1981,6 +1966,202 @@ button,
   right: 30px;
   bottom: 30px;
   left: 30px;
+}
+
+.booking {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+  background-color: #bbdffb;
+  background-image: url("../img/form-background.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
+  .booking {
+    background-image: url("../img/form-background@2x.jpg");
+  }
+}
+@media (max-width: 1023px) {
+  .booking {
+    background-image: url("../img/form-background-tablet.jpg");
+  }
+}
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .booking {
+    background-image: url("../img/form-background-tablet@2x.jpg");
+  }
+}
+@media (max-width: 374px) {
+  .booking {
+    background-image: url("../img/form-background-mobile.jpg");
+  }
+}
+@media (max-width: 374px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 374px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 374px) and (min-resolution: 144dpi), (max-width: 374px) and (min-resolution: 1.5dppx) {
+  .booking {
+    background-image: url("../img/form-background-mobile@2x.jpg");
+  }
+}
+
+.booking__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 1023px) {
+  .booking__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .booking__wrapper {
+    padding: 65px 0;
+  }
+}
+
+.booking__description {
+  margin-right: 50px;
+}
+@media (max-width: 1023px) {
+  .booking__description {
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
+.booking__wrapper h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+.booking__wrapper h2:first-child {
+  margin-top: 0;
+}
+@media (max-width: 1023px) {
+  .booking__wrapper h2 {
+    font-size: 34px;
+    line-height: 51px;
+  }
+}
+@media (max-width: 767px) {
+  .booking__wrapper h2 {
+    font-size: 24px;
+    line-height: 21px;
+  }
+}
+
+.booking__wrapper p {
+  max-width: 345px;
+  font-size: 18px;
+  line-height: 27px;
+}
+@media (max-width: 1023px) {
+  .booking__wrapper p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .booking__wrapper p:last-child {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .booking__wrapper p {
+    max-width: 400px;
+    padding: 0 25px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.booking__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  max-width: 403px;
+  padding: 50px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #f9fbfd;
+  background-color: #011C40;
+}
+
+.booking__form h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+}
+
+.booking__form-checkbox label {
+  font-size: 10px;
+  line-height: 13px;
+  color: #f9fbfd;
+}
+.booking__form-checkbox label:hover {
+  opacity: 0.8;
+}
+
+.booking input:not([type=checkbox]):not([type=radio]) {
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 16px;
+  font: inherit;
+  color: #011C40;
+  border: none;
+}
+.booking input:not([type=checkbox]):not([type=radio])::-webkit-input-placeholder {
+  font: inherit;
+  color: #011C40;
+  opacity: 0.7;
+}
+.booking input:not([type=checkbox]):not([type=radio])::-moz-placeholder {
+  font: inherit;
+  color: #011C40;
+  opacity: 0.7;
+}
+.booking input:not([type=checkbox]):not([type=radio]):-ms-input-placeholder {
+  font: inherit;
+  color: #011C40;
+  opacity: 0.7;
+}
+.booking input:not([type=checkbox]):not([type=radio])::-ms-input-placeholder {
+  font: inherit;
+  color: #011C40;
+  opacity: 0.7;
+}
+.booking input:not([type=checkbox]):not([type=radio])::placeholder {
+  font: inherit;
+  color: #011C40;
+  opacity: 0.7;
+}
+.booking input:not([type=checkbox]):not([type=radio]):focus[aria-invalid=true] {
+  background-color: #d84b4f;
+}
+.booking input:not([type=checkbox]):not([type=radio]):focus[aria-invalid=false] {
+  background-color: #aee4ae;
+}
+.booking input:not([type=checkbox]):not([type=radio])[aria-invalid=true] {
+  outline: 1px solid #d84b4f;
+}
+
+.booking__form-button {
+  display: block;
+  text-align: center;
+  font-weight: 600;
 }
 
 /* @mixin hover-focus {

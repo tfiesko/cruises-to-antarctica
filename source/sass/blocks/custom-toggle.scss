@@ -1,25 +1,12 @@
 .custom-toggle {
   position: relative;
+
   font-size: 18px;
   line-height: 27px;
   font-weight: 300;
 
   display: flex;
-  width: 500px;
-  padding: 14px 0 10px 36px;
-
-  @media screen and (max-width: 767px) {
-    padding: 14px 0 10px 0;
-    width: 100%;
-  }
-
-  &:last-of-type {
-    padding: 14px 0 58px 36px;
-
-    @media screen and (max-width: 767px) {
-      padding: 14px 0 58px 0;
-    }
-  }
+  min-height: 18px;
 
   input {
     position: absolute;
@@ -34,7 +21,10 @@
   label {
     position: relative;
 
-    padding-left: 52px;
+    padding-left: 23px;
+    min-height: 18px;
+    display: flex;
+    align-items: center;
 
     cursor: pointer;
 
@@ -50,12 +40,10 @@
       top: 0;
       left: 0;
 
-      width: 28px;
-      height: 28px;
+      width: 18px;
+      height: 18px;
 
-      border: 1.5px solid #2c39f2;
-
-      transition: border 0.3s ease;
+      background-color: $color-alice-blue;
 
       &::before {
         content: "";
@@ -63,14 +51,10 @@
         top: 50%;
         left: 50%;
 
-        width: 20px;
-        height: 20px;
-
-        background-color: rgba(#2c39f2, 0);
+        width: 10px;
+        height: 7px;
 
         transform: translate(-50%, -50%);
-
-        transition: background-color 0.3s ease;
       }
     }
   }
@@ -109,10 +93,11 @@
   }
 
   input:checked + .custom-toggle__icon {
-    border: 1.5px solid #2c39f2;
-
     &::before {
-      background-color: #2c39f2;
+      background-image: url("../img/svg/checked.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
     }
   }
 
