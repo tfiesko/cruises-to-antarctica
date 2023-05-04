@@ -363,6 +363,7 @@ html {
   line-height: 24px;
   font-family: "Montserrat", "Arial", sans-serif;
   color: #011C40;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -2199,6 +2200,7 @@ button,
 .contacts__map {
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 .contacts__map-wrapper {
