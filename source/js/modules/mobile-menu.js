@@ -1,6 +1,6 @@
 const mobileMenu = document.querySelector('[data-mobile-menu]');
 const mobileMenuButton = document.querySelector('[data-mobile-menu-button]');
-const mobilMenuLink = document.querySelectorAll('[data-mobile-menu-link]');
+const mobilMenuLink = document.querySelectorAll('[data-nav-link]');
 
 mobileMenuButton.addEventListener('click', ()=>{
   if (mobileMenu.classList.contains('is-open')) {
@@ -18,6 +18,10 @@ const onMobilMenuClose = ()=>{
   window.focusLock.unlock();
 };
 
-mobilMenuLink.forEach((link)=>{
-  link.addEventListener('click', onMobilMenuClose);
-});
+if (mobilMenuLink) {
+  mobilMenuLink.forEach((link)=>{
+    link.addEventListener('click', onMobilMenuClose);
+  });
+}
+
+
