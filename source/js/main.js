@@ -25,6 +25,8 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.querySelector('[data-map]').classList.remove('no-js');
+
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
