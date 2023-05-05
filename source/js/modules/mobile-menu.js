@@ -5,10 +5,18 @@ const mobilMenuLink = document.querySelectorAll('[data-nav-link]');
 mobileMenuButton.addEventListener('click', ()=>{
   if (mobileMenu.classList.contains('is-open')) {
     onMobilMenuClose();
+    mobilMenuLink.forEach((link)=>{
+      link.removeEventListener('click', onMobilMenuClose);
+    });
   } else {
     mobileMenu.classList.add('is-open');
     window.scrollLock.disableScrolling();
     window.focusLock.lock('.page-header');
+    if (mobilMenuLink) {
+      mobilMenuLink.forEach((link)=>{
+        link.addEventListener('click', onMobilMenuClose);
+      });
+    }
   }
 });
 
@@ -17,11 +25,3 @@ const onMobilMenuClose = ()=>{
   window.scrollLock.enableScrolling();
   window.focusLock.unlock();
 };
-
-if (mobilMenuLink) {
-  mobilMenuLink.forEach((link)=>{
-    link.addEventListener('click', onMobilMenuClose);
-  });
-}
-
-
