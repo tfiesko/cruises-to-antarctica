@@ -1,7 +1,36 @@
 .catalog {
   min-height: 600px;
+  padding: 60px 0 106px;
 
   text-align: center;
+
+  @include vp-1023 {
+    padding: 70px 0 84px;
+  }
+
+  @include vp-767 {
+    padding: 38px 0 50px;
+  }
+}
+
+.catalog h2 {
+  margin-bottom: 35px;
+
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 600;
+
+  @include vp-1023 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 16px;
+
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .catalog__card-list {
@@ -35,7 +64,7 @@
   &:focus-visible,
   &:focus-within {
     .catalog__card-content {
-      z-index: 1;
+      z-index: 2;
     }
   }
 
@@ -58,7 +87,7 @@
   z-index: -1;
 
   display: grid;
-  grid-template-columns: minmax(8px, 25px) minmax(159px, 1fr) minmax(8px, 25px);
+  grid-template-columns: minmax(8px, 25px) minmax(194px, 1fr) minmax(8px, 25px);
   grid-template-rows: 25px 1fr auto auto 25px;
   width: 100%;
   height: 100%;
@@ -131,11 +160,38 @@
 
 .catalog__card-cover {
   position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, $color-tangaroa 100%);
+  }
+
+  background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, $color-tangaroa 100%);
 }
 
 .catalog__card-cover h3 {
   position: absolute;
   right: 30px;
-  bottom: 30px;
+  bottom: 23px;
   left: 30px;
+
+  font-weight: 500;
+
+  @include vp-1023 {
+    bottom: 28px;
+    left: 35px;
+  }
+
+  @include vp-767 {
+    bottom: 18px;
+    left: 25px;
+  }
 }

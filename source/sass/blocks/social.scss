@@ -2,13 +2,18 @@
   display: grid;
   grid-template-columns: repeat(3, auto);
   column-gap: 27px;
-  padding: 0;
+  padding: 10px 0;
   margin: 0;
+  margin-left: auto;
 
   list-style: none;
 
   @include vp-1023 {
     column-gap: 20px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
   }
 }
 

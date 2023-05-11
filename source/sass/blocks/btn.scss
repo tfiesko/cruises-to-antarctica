@@ -20,7 +20,11 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
+  &:hover {
+    background-color: darken($color-alice-blue, 30%);
+  }
+
+  &:active {
+    background-color: darken($color-alice-blue, 60%);
   }
 }

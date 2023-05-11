@@ -5,9 +5,17 @@
   flex-shrink: 0;
   margin-right: 40px;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   &--footer {
     @include vp-767 {
-      margin-bottom: 30px;
+      margin-bottom: 19px;
     }
   }
 

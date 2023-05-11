@@ -1,14 +1,37 @@
 .nav-item {
   padding: 10px 0;
+  max-width: 170px;
 
   &--header-menu {
+    @include vp-767 {
+      max-width: 100%;
+    }
+
     .nav-item__link {
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+      @include vp-1023 {
+        text-shadow: none;
+      }
+
       @include vp-767 {
 
         color: $color-tangaroa;
         font-size: 18px;
         line-height: 22px;
         font-weight: 500;
+      }
+    }
+  }
+
+  &--footer {
+    .nav-item__link {
+      @include vp-1023 {
+        font-size: 12px;
+      }
+
+      @include vp-767 {
+        padding: 6px 0;
       }
     }
   }

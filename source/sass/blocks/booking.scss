@@ -41,15 +41,17 @@
 
   @include vp-1023 {
     flex-direction: column;
+    padding: 80px 0 100px;
   }
 
   @include vp-767 {
-    padding: 65px 0;
+    padding: 49px 0 65px;
   }
 }
 
 .booking__description {
   margin-right: 50px;
+  padding-top: 10px;
 
   @include vp-1023 {
     margin-right: 0;
@@ -62,7 +64,7 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 
   &:first-child {
     margin-top: 0;
@@ -74,13 +76,16 @@
   }
 
   @include vp-767 {
+    margin-bottom: 13px;
+
     font-size: 24px;
-    line-height: 21px;
+    line-height: 31px;
   }
 }
 
 .booking__wrapper p {
   max-width: 345px;
+  margin-top: 5px;
 
   font-size: 18px;
   line-height: 27px;
@@ -90,16 +95,20 @@
     margin-right: auto;
 
     &:last-child {
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
   }
 
   @include vp-767 {
     max-width: 400px;
-    padding: 0 25px;
+    padding: 0 15px;
 
     font-size: 16px;
     line-height: 22px;
+
+    &:last-child {
+      margin-bottom: 35px;
+    }
   }
 }
 
@@ -109,32 +118,54 @@
   row-gap: 20px;
   max-width: 403px;
   padding: 50px;
+  padding-top: 45px;
 
   font-size: 14px;
   line-height: 21px;
   color: $color-alice-blue;
 
   background-color: $color-tangaroa;
+
+  @include vp-767 {
+    padding: 32px 30px 40px;
+  }
 }
 
 .booking__form h3 {
   margin: 0;
+  margin-bottom: 5px;
 
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
+
+  @include vp-767 {
+    text-align: center;
+  }
 }
 
 .booking__form-checkbox {
+  margin-bottom: 10px;
+
   label {
     font-size: 10px;
     line-height: 13px;
 
     color: $color-alice-blue;
+  }
 
-    &:hover {
-      opacity: 0.8;
-    }
+  input ~ span:hover {
+    opacity: 0.8;
+  }
+
+  input:disabled ~ span {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include vp-767 {
+    margin-bottom: 0;
   }
 }
 
@@ -154,6 +185,20 @@
     opacity: 0.7;
   }
 
+  &:hover {
+    background-color: darken($color-alice-blue, 30%);
+  }
+
+  &:active {
+    background-color: darken($color-alice-blue, 60%);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
   &:focus[aria-invalid="true"] {
     background-color: $color-error;
   }
@@ -169,6 +214,7 @@
 
 .booking__form-button {
   display: block;
+  padding-top: 13px;
 
   text-align: center;
   font-weight: 600;
