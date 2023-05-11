@@ -575,6 +575,10 @@ button,
   background-color: #f9fbfd;
   border: none;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -1546,6 +1550,10 @@ button,
 .nav-item {
   padding: 10px 0;
   max-width: 170px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media (max-width: 767px) {
   .nav-item--header-menu {
@@ -1615,6 +1623,7 @@ button,
   -webkit-column-gap: 27px;
      -moz-column-gap: 27px;
           column-gap: 27px;
+  row-gap: 15px;
   padding: 10px 0;
   margin: 0;
   margin-left: auto;
@@ -1819,33 +1828,35 @@ button,
 }
 
 .advantages__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(206px, 1fr))[3];
+  grid-template-columns: repeat(3, minmax(206px, 1fr));
+  gap: 40px;
   text-align: start;
+}
+@media (max-width: 1023px) {
+  .advantages__list {
+    gap: 30px;
+  }
 }
 @media (max-width: 767px) {
   .advantages__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 0;
   }
 }
 
 .advantages__item {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-preferred-size: 206px;
-      flex-basis: 206px;
-  margin-right: 40px;
   min-height: 241px;
   padding: 30px 30px 25px;
   background-color: #f9fbfd;
-}
-.advantages__item:nth-child(3n) {
-  margin-right: 0;
 }
 .advantages__item::before {
   content: "";
@@ -1875,7 +1886,6 @@ button,
 @media (max-width: 1023px) {
   .advantages__item {
     padding: 26px 15px 20px 20px;
-    margin-right: 30px;
   }
   .advantages__item--cruise-ship::before {
     background-size: 21px 26px;
@@ -1886,10 +1896,6 @@ button,
 }
 @media (max-width: 767px) {
   .advantages__item {
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
     padding: 25px 15px 19px 20px;
     margin: 0 0 30px;
   }
