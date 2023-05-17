@@ -78,12 +78,14 @@
 }
 
 .hero__content h1 {
-  margin: 10px 0;
+  margin: 11px 0;
 
   font-size: 54px;
   line-height: 65px;
 
   @include vp-1023 {
+    margin: 10px 0;
+
     font-size: 50px;
     line-height: 61px;
   }
