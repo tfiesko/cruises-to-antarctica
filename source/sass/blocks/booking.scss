@@ -10,25 +10,49 @@
   background-position-x: center;
   background-repeat: no-repeat;
 
+  @supports (background-image: url("../img/form-background.webp")) {
+    background-image: url("../img/form-background.webp");
+  }
+
   @include vp-1024 {
     @include retina {
       background-image: url("../img/form-background@2x.jpg");
+
+      @supports (background-image: url("../img/form-background@2x.webp")) {
+        background-image: url("../img/form-background@2x.webp");
+      }
     }
   }
 
   @include vp-1023 {
     background-image: url("../img/form-background-tablet.jpg");
 
+    @supports (background-image: url("../img/form-background-tablet.webp")) {
+      background-image: url("../img/form-background-tablet.webp");
+    }
+
     @include retina {
       background-image: url("../img/form-background-tablet@2x.jpg");
+
+      @supports (background-image: url("../img/form-background-tablet@2x.webp")) {
+        background-image: url("../img/form-background-tablet@2x.webp");
+      }
     }
   }
 
   @include vp-374 {
     background-image: url("../img/form-background-mobile.jpg");
 
+    @supports (background-image: url("../img/form-background-mobile.webp")) {
+      background-image: url("../img/form-background-mobile.webp");
+    }
+
     @include retina {
       background-image: url("../img/form-background-mobile@2x.jpg");
+
+      @supports (background-image: url("../img/form-background-mobile@2x.webp")) {
+        background-image: url("../img/form-background-mobile@2x.webp");
+      }
     }
   }
 }

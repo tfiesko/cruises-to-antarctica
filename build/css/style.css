@@ -1106,9 +1106,19 @@ button,
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
+@supports (background-image: url("../img/hero-background-desktop.webp")) {
+  .hero {
+    background-image: url("../img/hero-background-desktop.webp");
+  }
+}
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
   .hero {
     background-image: url("../img/hero-background-desktop@2x.jpg");
+  }
+  @supports (background-image: url("../img/hero-background-desktop@2x.webp")) {
+    .hero {
+      background-image: url("../img/hero-background-desktop@2x.webp");
+    }
   }
 }
 @media (max-width: 1023px) {
@@ -1117,20 +1127,40 @@ button,
             box-shadow: none;
     background-image: url("../img/hero-background-tablet.jpg");
   }
+  @supports (background-image: url("../img/hero-background-tablet.webp")) {
+    .hero {
+      background-image: url("../img/hero-background-tablet.webp");
+    }
+  }
 }
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .hero {
     background-image: url("../img/hero-background-tablet@2x.jpg");
+  }
+  @supports (background-image: url("../img/hero-background-tablet@2x.webp")) {
+    .hero {
+      background-image: url("../img/hero-background-tablet@2x.webp");
+    }
   }
 }
 @media (max-width: 374px) {
   .hero {
     background-image: url("../img/hero-background-mobile.jpg");
   }
+  @supports (background-image: url("../img/hero-background-mobile.webp")) {
+    .hero {
+      background-image: url("../img/hero-background-mobile.webp");
+    }
+  }
 }
 @media (max-width: 374px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 374px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 374px) and (min-resolution: 144dpi), (max-width: 374px) and (min-resolution: 1.5dppx) {
   .hero {
     background-image: url("../img/hero-background-mobile@2x.jpg");
+  }
+  @supports (background-image: url("../img/hero-background-mobile@2x.webp")) {
+    .hero {
+      background-image: url("../img/hero-background-mobile@2x.webp");
+    }
   }
 }
 
@@ -1392,6 +1422,11 @@ button,
     height: 18px;
   }
 }
+@media (max-width: 767px) {
+  .social__link--ok {
+    width: 10px;
+  }
+}
 
 .social__link svg {
   fill: #f9fbfd;
@@ -1526,9 +1561,19 @@ button,
   background-size: cover;
   opacity: 0.1;
 }
+@supports (background-image: url("../img/advantages-background.webp")) {
+  .advantages::before {
+    background-image: url("../img/advantages-background.webp");
+  }
+}
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
   .advantages::before {
     background-image: url("../img/advantages-background@2x.jpg");
+  }
+  @supports (background-image: url("../img/advantages-background@2x.webp")) {
+    .advantages::before {
+      background-image: url("../img/advantages-background@2x.webp");
+    }
   }
 }
 @media (max-width: 1023px) {
@@ -1538,10 +1583,20 @@ button,
   .advantages::before {
     background-image: url("../img/advantages-background-tablet.jpg");
   }
+  @supports (background-image: url("../img/advantages-background-tablet.webp")) {
+    .advantages::before {
+      background-image: url("../img/advantages-background-tablet.webp");
+    }
+  }
 }
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .advantages::before {
     background-image: url("../img/advantages-background-tablet@2x.jpg");
+  }
+  @supports (background-image: url("../img/advantages-background-tablet@2x.webp")) {
+    .advantages::before {
+      background-image: url("../img/advantages-background-tablet@2x.webp");
+    }
   }
 }
 @media (max-width: 767px) {
@@ -1553,10 +1608,20 @@ button,
   .advantages::before {
     background-image: url("../img/advantages-background-mobile.jpg");
   }
+  @supports (background-image: url("../img/advantages-background-mobile.webp")) {
+    .advantages::before {
+      background-image: url("../img/advantages-background-mobile.webp");
+    }
+  }
 }
 @media (max-width: 374px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 374px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 374px) and (min-resolution: 144dpi), (max-width: 374px) and (min-resolution: 1.5dppx) {
   .advantages::before {
     background-image: url("../img/advantages-background-mobile@2x.jpg");
+  }
+  @supports (background-image: url("../img/advantages-background-mobile@2x.webp")) {
+    .advantages::before {
+      background-image: url("../img/advantages-background-mobile@2x.webp");
+    }
   }
 }
 
@@ -1889,29 +1954,59 @@ button,
   background-position-x: center;
   background-repeat: no-repeat;
 }
+@supports (background-image: url("../img/form-background.webp")) {
+  .booking {
+    background-image: url("../img/form-background.webp");
+  }
+}
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
   .booking {
     background-image: url("../img/form-background@2x.jpg");
+  }
+  @supports (background-image: url("../img/form-background@2x.webp")) {
+    .booking {
+      background-image: url("../img/form-background@2x.webp");
+    }
   }
 }
 @media (max-width: 1023px) {
   .booking {
     background-image: url("../img/form-background-tablet.jpg");
   }
+  @supports (background-image: url("../img/form-background-tablet.webp")) {
+    .booking {
+      background-image: url("../img/form-background-tablet.webp");
+    }
+  }
 }
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .booking {
     background-image: url("../img/form-background-tablet@2x.jpg");
+  }
+  @supports (background-image: url("../img/form-background-tablet@2x.webp")) {
+    .booking {
+      background-image: url("../img/form-background-tablet@2x.webp");
+    }
   }
 }
 @media (max-width: 374px) {
   .booking {
     background-image: url("../img/form-background-mobile.jpg");
   }
+  @supports (background-image: url("../img/form-background-mobile.webp")) {
+    .booking {
+      background-image: url("../img/form-background-mobile.webp");
+    }
+  }
 }
 @media (max-width: 374px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 374px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 374px) and (min-resolution: 144dpi), (max-width: 374px) and (min-resolution: 1.5dppx) {
   .booking {
     background-image: url("../img/form-background-mobile@2x.jpg");
+  }
+  @supports (background-image: url("../img/form-background-mobile@2x.webp")) {
+    .booking {
+      background-image: url("../img/form-background-mobile@2x.webp");
+    }
   }
 }
 

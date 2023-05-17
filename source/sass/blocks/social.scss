@@ -27,6 +27,12 @@
     width: 18px;
     height: 18px;
   }
+
+  @include vp-767 {
+    &--ok {
+      width: 10px;
+    }
+  }
 }
 
 .social__link svg {

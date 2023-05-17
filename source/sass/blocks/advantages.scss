@@ -22,12 +22,20 @@
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.1;
+
+    @supports (background-image: url("../img/advantages-background.webp")) {
+      background-image: url("../img/advantages-background.webp");
+    }
   }
 
   @include vp-1024 {
     @include retina {
       &::before {
         background-image: url("../img/advantages-background@2x.jpg");
+
+        @supports (background-image: url("../img/advantages-background@2x.webp")) {
+          background-image: url("../img/advantages-background@2x.webp");
+        }
       }
     }
   }
@@ -38,8 +46,16 @@
     &::before {
       background-image: url("../img/advantages-background-tablet.jpg");
 
+      @supports (background-image: url("../img/advantages-background-tablet.webp")) {
+        background-image: url("../img/advantages-background-tablet.webp");
+      }
+
       @include retina {
         background-image: url("../img/advantages-background-tablet@2x.jpg");
+
+        @supports (background-image: url("../img/advantages-background-tablet@2x.webp")) {
+          background-image: url("../img/advantages-background-tablet@2x.webp");
+        }
       }
     }
   }
@@ -52,8 +68,16 @@
     &::before {
       background-image: url("../img/advantages-background-mobile.jpg");
 
+      @supports (background-image: url("../img/advantages-background-mobile.webp")) {
+        background-image: url("../img/advantages-background-mobile.webp");
+      }
+
       @include retina {
         background-image: url("../img/advantages-background-mobile@2x.jpg");
+
+        @supports (background-image: url("../img/advantages-background-mobile@2x.webp")) {
+          background-image: url("../img/advantages-background-mobile@2x.webp");
+        }
       }
     }
   }
