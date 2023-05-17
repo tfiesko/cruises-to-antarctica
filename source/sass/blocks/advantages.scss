@@ -130,6 +130,7 @@
   @include vp-767 {
     padding: 25px 15px 19px 20px;
     margin: 0 0 30px;
+    min-height: 195px;
   }
 }
 
@@ -165,7 +166,7 @@
   }
 
   @include vp-767 {
-    max-width: 175px;
+    margin-right: 55px;
   }
 }
 

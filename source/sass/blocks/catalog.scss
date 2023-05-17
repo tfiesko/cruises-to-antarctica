@@ -40,13 +40,8 @@
   text-align: start;
 
   @include vp-1023 {
-    max-width: 678px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  @include vp-767 {
-    max-width: 309px;
   }
 }
 
@@ -145,7 +140,7 @@
 }
 
 .catalog__card-button {
-  justify-content: center;
+  text-align: center;
   width: 100%;
   grid-column: 2/-2;
   grid-row: -2/-3;
